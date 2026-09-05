@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Báo cáo Toán 11B — Tháng 8/2026</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;
+ background:#eef2f7;color:#1a2332;line-height:1.5;padding:16px}
+.wrap{max-width:1150px;margin:0 auto}
+.hd{background:linear-gradient(135deg,#1f3864,#2e5c8a);color:#fff;border-radius:14px;
+ padding:22px 26px;margin-bottom:16px;box-shadow:0 4px 14px rgba(31,56,100,.22)}
+.hd .eyebrow{font-size:12px;letter-spacing:2.4px;opacity:.82;text-transform:uppercase}
+.hd h1{font-size:27px;margin:6px 0 4px;font-weight:700}
+.hd .sub{font-size:14px;opacity:.93}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:11px;margin-bottom:16px}
+.kpi{background:#fff;border-radius:11px;padding:14px 16px;box-shadow:0 2px 7px rgba(0,0,0,.07);
+ border-left:4px solid #2e5c8a}
+.kpi .lbl{font-size:11.5px;color:#64748b;text-transform:uppercase;letter-spacing:.6px;font-weight:600}
+.kpi .val{font-size:25px;font-weight:700;color:#1f3864;margin-top:3px}
+.kpi .note{font-size:11.5px;color:#94a3b8;margin-top:1px}
+.card{background:#fff;border-radius:12px;padding:18px 20px;margin-bottom:16px;
+ box-shadow:0 2px 9px rgba(0,0,0,.07)}
+.card h2{font-size:16.5px;color:#1f3864;margin-bottom:13px;padding-bottom:8px;
+ border-bottom:2px solid #dce6f1;display:flex;align-items:center;gap:8px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{background:#2e5c8a;color:#fff;padding:9px 7px;text-align:center;font-weight:600;
+ position:sticky;top:0;font-size:12.5px}
+th:nth-child(2){text-align:left}
+td{padding:6px 5px;border-bottom:1px solid #e8eef5;text-align:center;white-space:nowrap}
+th:nth-child(2),td:nth-child(2){text-align:left;font-weight:500;
+ min-width:168px;max-width:230px;white-space:normal}
+th:nth-child(1),td:nth-child(1){width:46px}
+tbody tr:nth-child(even){background:#f7fafd}
+tbody tr:hover{background:#eaf2fb}
+.scroll{overflow-x:auto;border-radius:9px;border:1px solid #e2e8f0}
+.medal{font-size:16px}
+.g{background:#c6efce;color:#006100;font-weight:700;border-radius:4px;padding:1.5px 6px;display:inline-block}
+.r{background:#ffc7ce;color:#9c0006;font-weight:700;border-radius:4px;padding:1.5px 6px;display:inline-block}
+.a{background:#ffeb9c;color:#9c6500;font-weight:700;border-radius:4px;padding:1.5px 6px;display:inline-block}
+.muted{color:#94a3b8;font-style:italic}
+.xh{font-weight:700;color:#1f3864;font-size:14.5px}
+.bar{height:8px;background:#e8eef5;border-radius:5px;overflow:hidden;min-width:60px}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,#2e5c8a,#4a90d9)}
+.pho{display:grid;grid-template-columns:180px 1fr 52px;gap:8px;align-items:center;
+ margin-bottom:7px;font-size:13.5px}
+.pho .nm{color:#475569}
+.top3{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.t3{border-radius:11px;padding:15px;text-align:center;border:2px solid}
+.t3.a1{background:#fffbe6;border-color:#f0c000}
+.t3.a2{background:#f5f7fa;border-color:#b8c2cc}
+.t3.a3{background:#fdf3ec;border-color:#d99b6c}
+.t3 .m{font-size:31px}
+.t3 .n{font-weight:700;margin:5px 0 3px;font-size:14.5px}
+.t3 .s{font-size:12.5px;color:#64748b}
+.warn{background:#fff8e6;border-left:4px solid #f0a000;border-radius:8px;
+ padding:11px 14px;margin-bottom:8px;font-size:13.5px}
+.warn b{color:#9c6500}
+.note{background:#eef4fb;border-left:4px solid #2e5c8a;border-radius:8px;
+ padding:12px 15px;font-size:13px;color:#334155}
+.foot{text-align:center;color:#94a3b8;font-size:12px;margin-top:22px;padding-top:14px;
+ border-top:1px solid #dbe3ec}
+.legend{font-size:12.5px;color:#64748b;margin-top:10px;line-height:1.9}
+.legend code{background:#eef2f7;padding:2px 7px;border-radius:4px;font-family:inherit;font-weight:600}
+/* --- ten bam duoc de xem nhan xet --- */
+.nx{cursor:pointer;color:#1f3864;text-decoration:underline;text-decoration-style:dotted;
+ text-underline-offset:3px}
+.nx:hover{color:#4a90d9}
+.hint{font-size:12.5px;color:#64748b;margin-bottom:11px}
+/* --- hop thoai nhan xet --- */
+.ov{position:fixed;inset:0;background:rgba(15,23,42,.55);display:none;
+ align-items:center;justify-content:center;padding:18px;z-index:99}
+.ov.on{display:flex}
+.dlg{background:#fff;border-radius:14px;max-width:520px;width:100%;
+ max-height:86vh;overflow-y:auto;box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.dlg .dh{background:linear-gradient(135deg,#1f3864,#2e5c8a);color:#fff;
+ padding:16px 20px;border-radius:14px 14px 0 0;display:flex;
+ justify-content:space-between;align-items:flex-start;gap:12px}
+.dlg .dh .nm{font-size:17px;font-weight:700}
+.dlg .dh .mt{font-size:12.5px;opacity:.9;margin-top:3px}
+.dlg .x{background:rgba(255,255,255,.2);border:0;color:#fff;font-size:19px;
+ width:31px;height:31px;border-radius:8px;cursor:pointer;flex-shrink:0;line-height:1}
+.dlg .x:hover{background:rgba(255,255,255,.34)}
+.dlg .db{padding:18px 20px;font-size:14.5px;line-height:1.72;color:#1a2332}
+.dlg .ds{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:8px;
+ padding:0 20px 18px}
+.dlg .ds div{background:#f2f6fb;border-radius:8px;padding:9px;text-align:center}
+.dlg .ds .l{font-size:10.5px;color:#64748b;text-transform:uppercase;letter-spacing:.4px}
+.dlg .ds .v{font-size:17px;font-weight:700;color:#1f3864;margin-top:2px}
+@media print{body{background:#fff;padding:0}.card,.kpi{box-shadow:none;border:1px solid #ddd}
+ .hd{background:#1f3864!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ table{font-size:11px}th{font-size:10.5px}
+ .ov{display:none!important}.nx{text-decoration:none;color:inherit}.hint{display:none}}
+@media(max-width:640px){body{padding:9px}.hd h1{font-size:21px}table{font-size:12px}
+ .pho{grid-template-columns:120px 1fr 44px}
+ .dlg .db{font-size:14px}}
+</style></head><body><div class="wrap">
+
+<div class="hd">
+  <div class="eyebrow">Trung tâm Mapstudy Hạ Long · BẢN GỬI PHỤ HUYNH</div>
+  <h1>Báo cáo học tập môn Toán — Lớp 11B</h1>
+  <div class="sub">Tháng 8/2026 &nbsp;•&nbsp; Thầy Nguyễn Đình Long &nbsp;•&nbsp; Ca học: T5 19:30 · CN 17:00</div>
+</div>
+
+<div class="kpis"><div class="kpi"><div class="lbl">Sĩ số</div><div class="val">8</div><div class="note">8 buổi học</div></div><div class="kpi"><div class="lbl">Điểm thi TB</div><div class="val">8.25</div><div class="note">cao nhất 10 · thấp nhất 7</div></div><div class="kpi"><div class="lbl">TB kiểm tra</div><div class="val">8.83</div><div class="note">trung bình 4 cột KT</div></div><div class="kpi"><div class="lbl">Chuyên cần TB</div><div class="val">94%</div><div class="note">toàn lớp</div></div><div class="kpi"><div class="lbl">Điểm xếp hạng TB</div><div class="val">8.45</div><div class="note">thi 70 · KT 20 · CC 10</div></div></div>
+
+<div class="card"><h2>🏆 Top 3 của lớp</h2><div class="top3"><div class="t3 a1"><div class="m">🥇</div><div class="n">PHẠM MINH THU</div><div class="s">Điểm xếp hạng <b>9.78</b><br>thi 10 · KT 9.25 · chuyên cần 93%</div></div><div class="t3 a2"><div class="m">🥈</div><div class="n">PHẠM GIA BẢO</div><div class="s">Điểm xếp hạng <b>9.48</b><br>thi 9.5 · KT 9.15 · chuyên cần 100%</div></div><div class="t3 a3"><div class="m">🥉</div><div class="n">TRẦN VĂN ĐÔ</div><div class="s">Điểm xếp hạng <b>8.98</b><br>thi 9 · KT 9.03 · chuyên cần 88%</div></div></div></div>
+
+<div class="card"><h2>📊 Phổ điểm thi khảo sát</h2><div class="pho"><span class="nm">Giỏi (≥9,0)</span><span class="bar"><i style="width:100%"></i></span><b style="text-align:right">3</b></div><div class="pho"><span class="nm">Khá (8,0–8,9)</span><span class="bar"><i style="width:67%"></i></span><b style="text-align:right">2</b></div><div class="pho"><span class="nm">TB khá (6,5–7,9)</span><span class="bar"><i style="width:100%"></i></span><b style="text-align:right">3</b></div><div class="pho"><span class="nm">Trung bình (5,0–6,4)</span><span class="bar"><i style="width:0%"></i></span><b style="text-align:right">0</b></div><div class="pho"><span class="nm">Yếu (&lt;5,0)</span><span class="bar"><i style="width:0%"></i></span><b style="text-align:right">0</b></div><div class="pho"><span class="nm">Chưa có điểm thi</span><span class="bar"><i style="width:0%"></i></span><b style="text-align:right">0</b></div></div>
+
+<div class="card"><h2>📋 Bảng kết quả chi tiết</h2>
+  <div class="hint">👉 Bấm vào <b>tên học sinh</b> để xem nhận xét riêng của thầy cô.</div>
+  <div class="scroll"><table><thead><tr><th>Hạng</th><th>Họ và tên</th><th>Trường</th><th>Có mặt</th><th>Vắng</th><th>Chuyên cần</th><th>TB kiểm tra</th><th>Điểm thi</th><th>Xếp loại</th><th>Điểm xếp hạng</th></tr></thead><tbody><tr><td><span class="medal">🥇</span></td><td><span class="nx" data-i="0">PHẠM MINH THU</span><br><span class="muted" style="font-size:11.5px">học cả lớp 11A, 11B</span></td><td>HG</td><td>14</td><td>1</td><td>93%<div class="muted" style="font-size:10.5px">gộp 2 lớp: 14/15</div></td><td><span class="g">9.25</span></td><td><span class="g">10.00</span></td><td><span class="g">Giỏi</span></td><td><span class="xh">9.78</span></td></tr><tr><td><span class="medal">🥈</span></td><td><span class="nx" data-i="1">PHẠM GIA BẢO</span><br><span class="muted" style="font-size:11.5px">vào lớp 13/8</span></td><td>NQ</td><td>5</td><td>0</td><td>100%</td><td><span class="g">9.15</span></td><td><span class="g">9.50</span></td><td><span class="g">Giỏi</span></td><td><span class="xh">9.48</span></td></tr><tr><td><span class="medal">🥉</span></td><td><span class="nx" data-i="2">TRẦN VĂN ĐÔ</span></td><td>VVH</td><td>7</td><td>1</td><td>88%</td><td><span class="g">9.03</span></td><td><span class="g">9.00</span></td><td><span class="g">Giỏi</span></td><td><span class="xh">8.98</span></td></tr><tr><td>4</td><td><span class="nx" data-i="3">NGUYỄN THỦY CHI</span></td><td>CHUYÊN</td><td>8</td><td>0</td><td>100%</td><td><span class="g">9.62</span></td><td>8.00</td><td>Khá</td><td><span class="xh">8.52</span></td></tr><tr><td>5</td><td><span class="nx" data-i="4">LẠI TIẾN SƠN</span></td><td>ĐTĐ</td><td>6</td><td>1</td><td>86%</td><td>8.50</td><td>8.00</td><td>Khá</td><td><span class="xh">8.16</span></td></tr><tr><td>6</td><td><span class="nx" data-i="5">VŨ ANH THƯ</span></td><td>NQ</td><td>6</td><td>1</td><td>86%</td><td>8.45</td><td>7.50</td><td>TB khá</td><td><span class="xh">7.80</span></td></tr><tr><td>7</td><td><span class="nx" data-i="6">PHẠM NGỌC DIỆP</span><br><span class="muted" style="font-size:11.5px">vào lớp 20/8</span></td><td>HL</td><td>3</td><td>0</td><td>100%</td><td>7.82</td><td>7.00</td><td>TB khá</td><td><span class="xh">7.46</span></td></tr><tr><td>8</td><td><span class="nx" data-i="7">NGUYỄN BÌNH AN</span><br><span class="muted" style="font-size:11.5px">vào lớp 30/8</span></td><td>VL</td><td>1</td><td>0</td><td>100%</td><td><span class="muted">—</span></td><td>7.00</td><td>TB khá</td><td><span class="xh">7.38</span><div class="muted" style="font-size:11px">thiếu điểm kiểm tra</div></td></tr></tbody></table></div>
+  <div class="legend"><code>Điểm xếp hạng</code> = Điểm thi × 70% + TB kiểm tra × 20% + Chuyên cần × 10%<br><code>Chuyên cần</code> tính từ buổi học sinh bắt đầu học, không tính các buổi trước khi vào lớp<br><code>Thiếu thành phần</code> em nào chưa có điểm kiểm tra hoặc chưa có điểm danh thì phần đó không tính 0 mà chia lại tỉ lệ trên các phần có thật<br><code>Xếp loại</code> theo điểm thi: Giỏi ≥9,0 · Khá 8,0–8,9 · TB khá 6,5–7,9 · Trung bình 5,0–6,4 · Yếu &lt;5,0<br><code>gộp 2 lớp</code> em học cùng lúc hai lớp — chuyên cần là <b>tổng số buổi đi học của cả hai lớp</b> chia tổng số buổi của cả hai lớp, nên con số này giống nhau ở báo cáo của cả hai lớp</div>
+</div>
+
+
+
+
+
+<div class="foot">Trung tâm Mapstudy Hạ Long · Tổng hợp ngày 05/09/2026<br>
+Nguồn: bảng điểm danh &amp; bảng điểm tháng 8/2026 của giáo viên</div>
+</div>
+
+<div class="ov" id="ov">
+ <div class="dlg" role="dialog" aria-modal="true" aria-labelledby="dnm">
+  <div class="dh">
+   <div><div class="nm" id="dnm"></div><div class="mt" id="dmt"></div></div>
+   <button class="x" id="dx" aria-label="Đóng">&times;</button>
+  </div>
+  <div class="ds" id="dds"></div>
+  <div class="db" id="ddb"></div>
+ </div>
+</div>
+
+<script>
+var HS = [{"ten": "PHẠM MINH THU", "nx": "Con có học lực xuất sắc (điểm thi khảo sát 10), thầy cô đánh giá cao năng lực của con. Các bài kiểm tra trên lớp con làm rất tốt (trung bình 9,25), rất đáng khen. Con đi học tương đối đều (chuyên cần 93%). Con vắng buổi ngày 18/8 (11A). Con học cả lớp 11A, 11B nên chuyên cần trên đây là tổng hợp của cả hai lớp. Kính mong phụ huynh tiếp tục động viên để con giữ vững và phát huy phong độ.", "nv": ["18/8 (11A)"], "gop": true, "comat": 14, "mauso": 15, "thi": 10.0, "tbkt": 9.25, "cc": 93, "xl": "Giỏi", "hang": 1}, {"ten": "PHẠM GIA BẢO", "nx": "Con có học lực xuất sắc (điểm thi khảo sát 9,5), thầy cô đánh giá cao năng lực của con. Các bài kiểm tra trên lớp con làm rất tốt (trung bình 9,15), rất đáng khen. Con đi học rất đều đặn, chuyên cần 100% — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Kính mong phụ huynh tiếp tục động viên để con giữ vững và phát huy phong độ.", "nv": [], "gop": false, "comat": 5, "mauso": 5, "thi": 9.5, "tbkt": 9.15, "cc": 100, "xl": "Giỏi", "hang": 2}, {"ten": "TRẦN VĂN ĐÔ", "nx": "Con có học lực xuất sắc (điểm thi khảo sát 9), thầy cô đánh giá cao năng lực của con. Các bài kiểm tra trên lớp con làm rất tốt (trung bình 9,03), rất đáng khen. Con đi học tương đối đều (chuyên cần 88%). Con vắng buổi ngày 30/8. Kính mong phụ huynh tiếp tục động viên để con giữ vững và phát huy phong độ.", "nv": ["30/8"], "gop": false, "comat": 7, "mauso": 8, "thi": 9.0, "tbkt": 9.03, "cc": 88, "xl": "Giỏi", "hang": 3}, {"ten": "NGUYỄN THỦY CHI", "nx": "Con có học lực tốt (điểm thi khảo sát 8), thầy cô đánh giá cao năng lực của con. Các bài kiểm tra trên lớp con làm rất tốt (trung bình 9,62), rất đáng khen. Con đi học rất đều đặn, chuyên cần 100% — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Con có nền tảng tốt, kính mong phụ huynh đồng hành động viên để con sớm vươn lên nhóm dẫn đầu lớp.", "nv": [], "gop": false, "comat": 8, "mauso": 8, "thi": 8.0, "tbkt": 9.62, "cc": 100, "xl": "Khá", "hang": 4}, {"ten": "LẠI TIẾN SƠN", "nx": "Con có học lực tốt (điểm thi khảo sát 8), thầy cô đánh giá cao năng lực của con. Con giữ được kết quả kiểm tra trên lớp khá đều (trung bình 8,5). Con đi học tương đối đều (chuyên cần 86%). Con vắng buổi ngày 27/8. Con có nền tảng tốt, kính mong phụ huynh đồng hành động viên để con sớm vươn lên nhóm dẫn đầu lớp.", "nv": ["27/8"], "gop": false, "comat": 6, "mauso": 7, "thi": 8.0, "tbkt": 8.5, "cc": 86, "xl": "Khá", "hang": 5}, {"ten": "VŨ ANH THƯ", "nx": "Con đạt học lực khá (điểm thi khảo sát 7,5), nắm được phần lớn kiến thức. Con giữ được kết quả kiểm tra trên lớp khá đều (trung bình 8,45). Con đi học tương đối đều (chuyên cần 86%). Con vắng buổi ngày 20/8. Kính mong phụ huynh nhắc nhở con luyện tập thêm ở nhà để sớm vươn lên nhóm giỏi.", "nv": ["20/8"], "gop": false, "comat": 6, "mauso": 7, "thi": 7.5, "tbkt": 8.45, "cc": 86, "xl": "TB khá", "hang": 6}, {"ten": "PHẠM NGỌC DIỆP", "nx": "Con mới vào lớp được 3 buổi nhưng đã bắt nhịp khá tốt, đạt 7 ở bài khảo sát — đây là tín hiệu rất đáng khích lệ. Nếu con học bổ trợ thêm để lấp phần kiến thức đã học trước đó, con sẽ tiến bộ nhanh.", "nv": [], "gop": false, "comat": 3, "mauso": 3, "thi": 7.0, "tbkt": 7.82, "cc": 100, "xl": "TB khá", "hang": 7}, {"ten": "NGUYỄN BÌNH AN", "nx": "Con mới vào lớp được 1 buổi nhưng đã bắt nhịp khá tốt, đạt 7 ở bài khảo sát — đây là tín hiệu rất đáng khích lệ. Nếu con học bổ trợ thêm để lấp phần kiến thức đã học trước đó, con sẽ tiến bộ nhanh.", "nv": [], "gop": false, "comat": 1, "mauso": 1, "thi": 7.0, "tbkt": null, "cc": 100, "xl": "TB khá", "hang": 8}];
+var ov = document.getElementById('ov');
+function esc(s){ var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
+function o(i){
+  var h = HS[i]; if (!h) return;
+  document.getElementById('dnm').textContent = h.ten;
+  document.getElementById('dmt').textContent =
+    (h.hang ? 'Hạng ' + h.hang + ' của lớp · ' : '') + h.xl;
+  var o2 = [];
+  o2.push(['Điểm thi', h.thi == null ? '—' : h.thi.toFixed(2).replace('.', ',')]);
+  o2.push(['TB kiểm tra', h.tbkt == null ? '—' : h.tbkt.toFixed(2).replace('.', ',')]);
+  o2.push(['Chuyên cần', h.cc == null ? '—' : h.comat + '/' + h.mauso + ' buổi (' + h.cc + '%)']);
+  document.getElementById('dds').innerHTML =
+    o2.map(function(x){ return '<div><div class="l">' + esc(x[0]) + '</div><div class="v">' + esc(x[1]) + '</div></div>'; }).join('');
+  var db = document.getElementById('ddb');
+  db.textContent = h.nx;
+  if (h.nv && h.nv.length) {
+    var p = document.createElement('div');
+    p.style.cssText = 'margin-top:12px;padding:10px 12px;background:#fff8e6;'
+      + 'border-left:4px solid #f0a000;border-radius:8px;font-size:13.5px';
+    p.innerHTML = '<b>Buổi con vắng:</b> ' + esc(h.nv.join(', '))
+      + (h.gop ? '<br><span style="font-size:12px;color:#64748b">'
+                 + '(tổng hợp cả hai lớp con theo học)</span>' : '');
+    db.appendChild(p);
+  }
+  ov.classList.add('on');
+}
+function c(){ ov.classList.remove('on'); }
+document.addEventListener('click', function(ev){
+  var t = ev.target.closest ? ev.target.closest('.nx') : null;
+  if (t) { o(+t.getAttribute('data-i')); return; }
+  if (ev.target === ov || ev.target.id === 'dx') c();
+});
+document.addEventListener('keydown', function(ev){ if (ev.key === 'Escape') c(); });
+</script>
+</body></html>
